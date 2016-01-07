@@ -16,14 +16,14 @@ dphi = state(:,2);
 cphi = cos(phi);
 sphi = sin(phi);
 
-y = d*sphi;
-xd = -d*sphi.*dphi;
-yd = d*cphi.*dphi;
+y = sys.d*sphi;
+xd = -sys.d*sphi.*dphi;
+yd = sys.d*cphi.*dphi;
 
 erot = 1/2*sys.I*dphi.^2;
 elin = 1/2*sys.m*(xd.^2+yd.^2);
 ekin = erot+elin;
-eg = m*abs(g)*y;
+eg = m*abs(sys.g)*y;
 emech = ekin + eg;
 
 figure;
