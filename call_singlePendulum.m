@@ -51,10 +51,12 @@ for i =1:length(out_vid.x)
     a=line([0,out_vid.x(i)],[0,out_vid.y(i)]);
     set(a,'color','b','linewidth',3);
     hold on;
-    a=line([0,out_vid.Fx(i)/1000],[0,out_vid.Fy(i)/1000]);
-    set(a,'color','r','linewidth',1);
+    if isfield(out_vid,'Fx')
+        a=line([0,out_vid.Fx(i)/1000],[0,out_vid.Fy(i)/1000]);
+        set(a,'color','r','linewidth',1);
+    end;
     ax=1.5;
     axis([-ax,ax,-ax,ax]);
-    pause(period_vid);   
+    pause(period_vid);
     hold off
 end;
