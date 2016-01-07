@@ -23,7 +23,7 @@ yd = sys.d*cphi.*dphi;
 erot = 1/2*sys.I*dphi.^2;
 elin = 1/2*sys.m*(xd.^2+yd.^2);
 ekin = erot+elin;
-eg = m*abs(sys.g)*y;
+eg = sys.m*abs(sys.g)*y;
 emech = ekin + eg;
 
 figure;
