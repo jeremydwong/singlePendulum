@@ -1,5 +1,6 @@
 %% this is a simple demo for simulating a single pendulum. 
 % checked 2021-09-17. jdw. 
+% sns added a comment to understand git branching
 %% define system parameters.
 sys = struct;
 sys.m = 12;
