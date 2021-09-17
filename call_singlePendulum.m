@@ -1,3 +1,5 @@
+%% this is a simple demo for simulating a single pendulum. 
+% checked 2021-09-17. jdw. 
 %% define system parameters.
 sys = struct;
 sys.m = 12;
